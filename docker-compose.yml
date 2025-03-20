@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  gemini-proxy:
+    build: .
+    container_name: gemini-proxy
+    ports:
+      - "9494:9494"
+    volumes:
+      - ./config:/app/config
+    restart: unless-stopped
